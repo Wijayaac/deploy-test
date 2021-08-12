@@ -16,6 +16,7 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install -g yarn
+        yarn install
         yarn build
     
     - name: 📂 Sync files
