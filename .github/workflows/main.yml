@@ -15,8 +15,8 @@ jobs:
       
     - name: 🔨 Build Project
       run: |
-        npm install
-        npm run build
+        npm install -g yarn
+        yarn build
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -24,3 +24,5 @@ jobs:
         server: ftp.undagicode.com
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
+        local-dir: ./public/
+        dangerous-clean-slate: true
