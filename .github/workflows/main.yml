@@ -18,7 +18,10 @@ jobs:
         npm install -g yarn
         yarn install
         yarn build
-    
+      env:
+        GATSBY_SITE_URL: "http://staging.undagicode.com/"
+        GATSBY_DESCRIPTION: "this site is made for deployment testing using github Actions"
+        GATSBY_NAME: ${{ secrets.gatsby_name }}
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
