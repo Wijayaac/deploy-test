@@ -1,6 +1,5 @@
-name: Manually triggered workflow
+name: 🚀 Deploy website on Manual Trigger
 on: workflow_dispatch
-name: 🚀 Deploy website on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
